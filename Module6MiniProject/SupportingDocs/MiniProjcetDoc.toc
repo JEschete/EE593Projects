@@ -1,0 +1,17 @@
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {section}{\numberline {2}Design and Algorithm}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Building a Minimal Height Tree}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Validating the BST}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Printing Elements in a Given Range}{3}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Finding the First Common Ancestor}{3}{subsection.2.4}%
+\contentsline {section}{\numberline {3}API Specifications}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}\texttt {buildMinimalHeightTree}}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}\texttt {validateBST}}{4}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}\texttt {printRange}}{4}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}\texttt {firstCommonAncestor}}{4}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Example Screenshots and Outputs}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Example 1: BST Construction and Height Calculation}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Example 2: Range Query}{5}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Example 3: First Common Ancestor}{5}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Additional Information}{5}{section.5}%
+\contentsline {section}{\numberline {6}Conclusion}{5}{section.6}%

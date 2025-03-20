@@ -1,132 +1,137 @@
+
 # Week2_ProgrammingHW
 
-This repository contains a C++ program that allows you to:
-1. Check whether a string is a palindrome (ignores spaces and is case-insensitive).
-2. Swap adjacent letters in a string, handling even-length and odd-length strings slightly differently.
-3. Exit the program once you’re done.
+This repository contains a C++ program that demonstrates custom pointer-based operations using a self-defined linked list data structure. The program allows you to:
 
-Below you’ll find a detailed overview of how the program works, what it does, and how to load it into Visual Studio Community. There are also notes on the C++ compiler packages needed.
+1. Check whether an input string is a palindrome (ignoring spaces, punctuation, and case).
+2. Swap adjacent letters in a string (handling even-length and odd-length strings appropriately).
+3. Exit the program once you’re finished.
+
+The solution meets the assignment requirements by implementing my own `Node` and `LinkedList` classes and managing memory and pointers directly rather than relying on built-in APIs.
 
 ---
 
 ## Table of Contents
+
 1. [Program Overview](#program-overview)  
 2. [Features Explained](#features-explained)  
+   - [Custom Linked List and Pointer-Based Methods](#custom-linked-list-and-pointer-based-methods)  
    - [Palindrome Checker](#palindrome-checker)  
    - [Letter Swapper](#letter-swapper)  
 3. [Prerequisites](#prerequisites)  
 4. [Loading into Visual Studio Community](#loading-into-visual-studio-community)  
-5. [Running the Application](#running-the-application)  
+5. [Compiling and Running the Application](#compiling-and-running-the-application)  
 6. [How the Code Works](#how-the-code-works)  
-7. [License](#license)
-
 ---
 
 ## Program Overview
 
-When you run the program, you’ll be presented with a simple menu:
+When you run the program, you are presented with a simple menu:
+
 - **Option 1:** Check if a string is a palindrome.  
 - **Option 2:** Swap adjacent letters in a string.  
 - **Option 3:** Exit the program.
 
-The code demonstrates fundamental string manipulation techniques:
-- **Palindrome Checking:** Uses two-pointer logic to compare letters from the start and end, ignoring spaces and case.
-- **Letter Swapping:** Performs a swap of neighboring characters, with even-length and odd-length strings handled separately.
+The code demonstrates fundamental techniques in string manipulation by using custom data structures and pointer operations. It builds its own linked list to manage characters from the input, rather than using the C++ Standard Library’s container classes.
 
 ---
 
 ## Features Explained
 
+### Custom Linked List and Pointer-Based Methods
+- **Custom Data Structures:**  
+  The program defines a `Node` class to store individual characters and a `LinkedList` class that manages these nodes.  
+- **Pointer Manipulation:**  
+  All operations—including adding nodes, reversing the list for the palindrome check, and swapping adjacent nodes—are performed by directly manipulating pointers.  
+- **Memory Management:**  
+  The program includes a destructor and helper functions to ensure that dynamically allocated memory is properly freed.
+
 ### Palindrome Checker
-1. Prompts you for a string.
-2. Ignores any non-alphabetic characters (like spaces or punctuation) by moving pointers inward until valid letters are found.
-3. Compares the characters at the start and end of the string in a case-insensitive manner.
-4. Notifies you whether the string is a palindrome or not, and allows multiple checks.
+- **Input Processing:**  
+  The program prompts for a string and constructs a linked list containing only the alphabetic characters (ignoring spaces and punctuation).  
+- **Case-Insensitive Comparison:**  
+  The palindrome check is done by creating a reversed copy of the list using pointer-based operations and comparing node by node in a case-insensitive manner.  
+- **User Interaction:**  
+  After displaying whether the string is a palindrome, the user is given the option to test another string.
 
 ### Letter Swapper
-1. Prompts you for a word.
-2. Checks the length of the word:
-   - **Even length:** Swaps every pair of adjacent characters.
-   - **Odd length:** Swaps every pair of adjacent characters but leaves the last character in place.
-3. Displays the result of the swapping, with the option to process more words.
+- **Input Processing:**  
+  The program prompts for a word and builds a linked list from every character in the string.  
+- **Swapping Logic:**  
+  The swapping operation traverses the linked list and swaps the data of every pair of adjacent nodes. In the case of an odd-length string, the final character remains unchanged.  
+- **User Interaction:**  
+  The result is displayed, and the user can choose to process additional words.
 
 ---
 
 ## Prerequisites
 
 1. **Visual Studio Community (2019 or later)**  
-   - During installation, ensure the **Desktop development with C++** workload is selected.  
+   - Ensure you have installed the **Desktop development with C++** workload.  
    - This includes the MSVC (Microsoft Visual C++) toolset and CMake support if needed.
 
 2. **C++ Compiler / Toolset**  
-   - By installing the Desktop development with C++ workload, you’ll already have the compiler and necessary libraries on Windows.  
+   - With the Desktop development workload installed, the necessary compiler and libraries will be available on Windows.
 
-3. **Git (Optional)**  
-   - If you wish to clone this repository directly, install Git from [https://git-scm.com/](https://git-scm.com/).
+3. **Git**  
+   - To clone the repository, install Git from [https://git-scm.com/](https://git-scm.com/).
 
 ---
 
 ## Loading into Visual Studio Community
 
-1. **Clone or Download**  
-   - If you use Git, open a terminal and run:  
+1. **Clone the Repository and Checkout the Correct Branch:**  
+   - Open a terminal (or Git Bash) and run the following commands:
      ```bash
-     git clone https://github.com/YourUsername/Week2_ProgrammingHW.git](https://github.com/jliu153/cpe593ws_2025Spring.git
-     ```  
-   - Alternatively, use the **Code** button on GitHub to download the ZIP file, then extract it to a folder of your choice.
+     git clone https://github.com/jliu153/cpe593ws_2025Spring.git
+     cd cpe593ws_2025Spring
+     git checkout Eschete7179
+     ```
+2. **Locate the Project Files:**  
+   - The solution and project files are located in the folder **Week2HW** within the repository.
 
-2. **Open the Solution**  
+3. **Open the Solution:**  
    1. Launch Visual Studio Community.  
    2. Click on **File** → **Open** → **Project/Solution…**.  
-   3. Navigate to the folder where you cloned or downloaded this repository.  
-   4. Select the `Week2_ProgrammingHW.sln` file and click **Open**.
+   3. Navigate to the `cpe593ws_2025Spring/Week2HW` folder.  
+   4. Select the solution file (e.g., `Week2HW.sln`) and click **Open**.
 
-3. **Verify Project Structure**  
-   - In the **Solution Explorer**, you should see:  
-     - References and External Dependencies  
-     - **Header Files**  
-     - **Resource Files**  
-     - **Source Files**, containing `HW2_Eschete.cpp`
+4. **Verify Project Structure:**  
+   - In the **Solution Explorer**, you should see the project files, including the source files for the program.
 
 ---
 
-## Running the Application
+## Compiling and Running the Application
 
-Once the solution is loaded successfully:
-1. Make sure `HW2_Eschete.cpp` is selected as the startup file if necessary (by right-clicking on the file and selecting **Set as Startup Item**).
-2. Press the green **Run** button (or press **F5** on your keyboard).  
-3. In the **Output** or **Console** window, you will see the program’s menu.  
-4. Follow the on-screen prompts to interact with the palindrome checker or letter swapper.  
-
-You can re-run and test multiple inputs as prompted until you choose to exit.
+### Using Visual Studio Community:
+1. **Set the Startup File (if necessary):**  
+   - Right-click on the main source file (e.g., `week2_dynamicArrays.cpp`) in the Solution Explorer and select **Set as Startup Item**.
+2. **Build and Run:**  
+   - Press the green **Run** button or press **F5**.  
+   - The Console window will open with the program’s menu. Follow the on-screen prompts to interact with the palindrome checker or letter swapper.
 
 ---
 
 ## How the Code Works
 
-1. **`main()` Function and Menu**  
-   - Prompts you to choose between checking a palindrome, performing a letter swap, or exiting.
-   - Uses a `do-while` loop to keep showing the menu until you select option **3**.
+1. **Main Function and Menu:**  
+   - The `main()` function displays a menu that allows you to choose between checking for a palindrome, swapping adjacent letters, or exiting the program.  
+   - A loop ensures that the menu is repeatedly shown until the user decides to exit.
 
-2. **`is_palindrome()` Function**  
-   - Reads a string (`processed_word`) from the user.  
-   - Uses a two-pointer approach: one pointer at the start, one at the end.  
-   - Ignores non-alphabetic characters by moving each pointer inward until a valid character is found.  
-   - Compares characters case-insensitively via `tolower()`.  
-   - Prints a message indicating if the string is a palindrome.
-   - Offers a prompt to check another word (repeats until user enters "n").
+2. **Palindrome Check:**  
+   - The program filters the input to remove non-alphabetic characters and builds a custom linked list.  
+   - It then creates a reversed copy of the linked list by dynamically allocating new nodes and reversing pointer links.  
+   - A node-by-node comparison (ignoring case) determines whether the string is a palindrome.
 
-3. **`letter_swap()` Function**  
-   - Reads a string (`processed_word`) from the user.  
-   - Checks if the length is odd or even.  
-   - Calls `odd_swap()` for odd lengths or `even_swap()` for even lengths.  
-   - Each swap function processes pairs of characters and prints the transformed string.  
-   - Allows the user to process more words (repeats until user enters "n").
+3. **Letter Swapping:**  
+   - The entire input word is added to the linked list.
+   - The program traverses the list and swaps the data in every pair of adjacent nodes.  
+   - If the list has an odd number of nodes, the final node remains unchanged.
 
-4. **`odd_swap()` and `even_swap()`**  
-   - These functions demonstrate an important distinction:  
-     - **Odd length:** The last character remains unchanged.  
-     - **Even length:** Every character has a partner to swap with.  
-   - Both functions print intermediate output, showing the processing steps and final swapped string.
+4. **Memory Management:**  
+   - Custom destructors and helper functions ensure that all dynamically allocated memory is released when no longer needed.
 
----
+5. **User Interaction:**  
+   - After each operation (palindrome checking or letter swapping), the user is prompted whether to process another input, ensuring an interactive and user-friendly experience.
+
+## This README.md was generated with the assistance of ChatGPT o3-mini-high. Manual Edits were made for correctness. 
